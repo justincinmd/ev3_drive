@@ -6,7 +6,7 @@ from io import BytesIO
 
 print "Starting Camera"
 camera = PiCamera()
-camera.framerate = 15
+camera.framerate = 30
 camera.resolution = (160,120)
 camera.start_preview()
 

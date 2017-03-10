@@ -1,11 +1,15 @@
-RPi.GPIO==0.6.2
+RPi.GPIO==0.6.3
 argparse==1.2.1
-## FIXME: could not find svn URL in dependency_links for this package:
-distribute==0.6.24dev-r0
-pifacecommon==4.1.2
-pifacedigitalio==3.0.4
-pygobject==3.8.2
-urwid==1.2.1
+chardet==2.3.0
+colorama==0.3.2
+html5lib==0.999
+ndg-httpsclient==0.3.2
+pyOpenSSL==0.13.1
+pyasn1==0.1.7
+python-apt==0.9.3.12
+requests==2.4.3
+six==1.8.0
+urllib3==1.9.1
 virtualenv==15.1.0
-wicd==1.7.2.4
+wheel==0.24.0
 wsgiref==0.1.2
