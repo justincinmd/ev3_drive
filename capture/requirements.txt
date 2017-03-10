@@ -1,0 +1,11 @@
+RPi.GPIO==0.6.2
+argparse==1.2.1
+## FIXME: could not find svn URL in dependency_links for this package:
+distribute==0.6.24dev-r0
+pifacecommon==4.1.2
+pifacedigitalio==3.0.4
+pygobject==3.8.2
+urwid==1.2.1
+virtualenv==15.1.0
+wicd==1.7.2.4
+wsgiref==0.1.2
