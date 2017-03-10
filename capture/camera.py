@@ -29,4 +29,4 @@ for _ in camera.capture_continuous(stream, 'jpeg', use_video_port=True):
     stream.truncate()
     if last_response is not None:
         last_response.result()
-    last_response = session.post('http://10.86.137.190:5000/', data=img_data)
+    last_response = session.post('http://172.30.166.64:5000/', data=img_data)
