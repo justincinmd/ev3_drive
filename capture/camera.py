@@ -14,6 +14,7 @@ print "Starting Capture"
 session = FuturesSession()
 stream = BytesIO()
 last_response = None
+last_control_response = None
 last_second = 0
 count = 0
 for _ in camera.capture_continuous(stream, 'jpeg', use_video_port=True):
@@ -27,6 +28,9 @@ for _ in camera.capture_continuous(stream, 'jpeg', use_video_port=True):
     img_data = stream.read()
     stream.seek(0)
     stream.truncate()
+    if last_control_response is not None:
+        last_control_response.result()
     if last_response is not None:
-        last_response.result()
+        control = last_response.result().content
+        last_control_response = session.post('http://localhost:2000/', data=control)
     last_response = session.post('http://172.30.166.64:5000/', data=img_data)
